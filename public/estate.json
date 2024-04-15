@@ -1,0 +1,110 @@
+[
+    {
+      "image": "https://i.ibb.co/fHyRVRb/Modern-Industrial-Complex.jpg",
+      "estate_title": "Modern Industrial Complex",
+      "id": 1,
+      "segment_name": "Industrial",
+      "description": "State-of-the-art industrial complex with excellent connectivity and amenities.",
+      "price": 5000000,
+      "status": "sale",
+      "area": "50000 sq ft",
+      "location": "Suburb Industrial Park, City",
+      "facilities": ["24/7 Security", "Loading Docks", "Ample Parking"]
+    },
+    {
+      "image": "https://i.ibb.co/pZ6Rd8T/Warehouse-and-Distribution-Center.jpg",
+      "estate_title": "Warehouse and Distribution Center",
+      "id": 2,
+      "segment_name": "Industrial",
+      "description": "Spacious warehouse with efficient layout and easy access to major highways.",
+      "price": 2500000,
+      "status": "auction",
+      "area": "30000 sq ft",
+      "location": "Industrial District, City",
+      "facilities": ["Loading Bays", "Freight Elevators", "Office Space"]
+    },
+    {
+      "image": "https://i.ibb.co/FbDfHQy/Manufacturing-Facility.jpg",
+      "estate_title": "Manufacturing Facility",
+      "id": 3,
+      "segment_name": "Industrial",
+      "description": "Well-equipped manufacturing facility with ample space for production lines.",
+      "price": 75000,
+      "status": "lease",
+      "area": "20000 sq ft",
+      "location": "Industrial Estate, City Outskirts",
+      "facilities": ["High-Power Electrical Supply", "Overhead Cranes", "Backup Generators"]
+    },
+    {
+      "image": "https://i.ibb.co/StvHwB6/Logistics-and-Distribution-Hub.jpg",
+      "estate_title": "Logistics and Distribution Hub",
+      "id": 4,
+      "segment_name": "Industrial",
+      "description": "Strategic location for logistics and distribution operations, with easy access to major transport routes.",
+      "price": 4000000,
+      "status": "sale",
+      "area": "40000 sq ft",
+      "location": "Transport Corridor, City",
+      "facilities": ["Cross-Docking Facilities", "Cold Storage", "Truck Parking"]
+    },
+    {
+      "image": "https://i.ibb.co/2kGQfzP/Light-Industrial-Unit.jpg",
+      "estate_title": "Light Industrial Unit",
+      "id": 5,
+      "segment_name": "Industrial",
+      "description": "Versatile light industrial unit suitable for various manufacturing and assembly operations.",
+      "price": 50000,
+      "status": "lease",
+      "area": "10000 sq ft",
+      "location": "Industrial Park, City Suburbs",
+      "facilities": ["High Ceilings", "Roller Shutters", "Fenced Yard"]
+    },
+    {
+      "image": "https://i.ibb.co/vVwqMRn/Research-and-Development-Facility.jpg",
+      "estate_title": "Research and Development Facility",
+      "id": 6,
+      "segment_name": "Industrial",
+      "description": "Purpose-built facility for research, development, and testing activities, with specialized infrastructure.",
+      "price": 3500000,
+      "status": "auction",
+      "area": "35000 sq ft",
+      "location": "Technology Park, City",
+      "facilities": ["Clean Rooms", "Specialized Labs", "Conference Rooms"]
+    },
+    {
+      "image": "https://i.ibb.co/d2XqVLS/Industrial-Flex-Space.jpg",
+      "estate_title": "Industrial Flex Space",
+      "id": 7,
+      "segment_name": "Industrial",
+      "description": "Flexible industrial space suitable for various light manufacturing, assembly, and storage operations.",
+      "price": 60000,
+      "status": "lease",
+      "area": "15000 sq ft",
+      "location": "Business Park, City Outskirts",
+      "facilities": ["Office Space", "Loading Docks", "Ample Parking"]
+    },
+    {
+      "image": "https://i.ibb.co/RHmspC3/Food-Processing-Plant.jpg",
+      "estate_title": "Food Processing Plant",
+      "id": 8,
+      "segment_name": "Industrial",
+      "description": "Modern food processing facility with specialized equipment and certifications.",
+      "price": 6000000,
+      "status": "sale",
+      "area": "60000 sq ft",
+      "location": "Food Processing Zone, City",
+      "facilities": ["Refrigeration Units", "Clean Rooms", "Quality Control Labs"]
+    },
+    {
+      "image": "https://i.ibb.co/gwDp4F0/Bulk-Storage-Facility.jpg",
+      "estate_title": "Bulk Storage Facility",
+      "id": 9,
+      "segment_name": "Industrial",
+      "description": "Secure and well-maintained facility for bulk storage of raw materials or finished goods.",
+      "price": 80000,
+      "status": "lease",
+      "area": "25000 sq ft",
+      "location": "Industrial Area, City Outskirts",
+      "facilities": ["High Ceilings", "Heavy-Duty Flooring", "Gated Access"]
+    }
+  ]

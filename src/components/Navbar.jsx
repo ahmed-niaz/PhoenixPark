@@ -1,4 +1,4 @@
-import {   NavLink } from "react-router-dom";
+import {   Link, NavLink } from "react-router-dom";
 // import useAuth from "../hooks/useAuth";
 
 const Navbar = () => {
@@ -7,7 +7,7 @@ const Navbar = () => {
     const links = (
         <>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink  to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/login">login</NavLink>
@@ -22,7 +22,7 @@ const Navbar = () => {
         </>
       );
       return (
-        <main>
+        <main className="container mx-auto">
           <div className="navbar bg-base-100">
             <div className="navbar-start">
               <div className="dropdown">
@@ -49,6 +49,7 @@ const Navbar = () => {
                   {links}
                 </ul>
               </div>
+              <Link className="btn btn-ghost text-3xl font-jersey text-[#d90429] tracking-wide">PhoenixPark</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">{links}</ul>

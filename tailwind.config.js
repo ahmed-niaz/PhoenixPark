@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        jersey: '"Jersey 20", sans-serif',
+        noto: '"Noto Sans", sans-serif',
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
