@@ -33,7 +33,6 @@ const Register = () => {
             <div className="divider w-3/4 mx-auto"></div>
             <form
               className="card-body w-[320px] md:w-[440px] lg:w-[540px]"
-              // onSubmit={handleSubmit}
               onSubmit={handleSubmit(onSubmit)}
             >
               <div className="form-control ">

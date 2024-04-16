@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-// import useAuth from "../hooks/useAuth";
+import { AuthContext } from "../providers/FirebaseProvider";
+
 
 const Navbar = () => {
-  //   const {user,logOut} = useAuth()
+    const {user,} = useContext(AuthContext)
 
   const links = (
     <>
@@ -86,19 +88,17 @@ const Navbar = () => {
             role="button"
             className="btn btn-ghost btn-circle avatar"
           ></div>
-          {/* {user ? (
-                <button onClick={logOut} className="btn">
+          {user ? (
+                <button  className="btn">
                   Sign Out
                 </button>
               ) : (
                 <Link to="/login">
                   <button className="btn">Login</button>
                 </Link>
-              )} */}
+              )}
 
-          <Link to="/login">
-            <button className="btn glass bg-[#d90429]">Login</button>
-          </Link>
+          
         </div>
       </div>
     </main>

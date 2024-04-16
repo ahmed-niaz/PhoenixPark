@@ -1,9 +1,28 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/FirebaseProvider";
+import { useForm } from "react-hook-form";
 
 
 
 const Login = () => {
+    const {loginUser} = useContext(AuthContext)
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm();
+      const onSubmit = (data) => {
+        const { email, password } = data;
+        loginUser(email, password)
+          .then((result) => {
+            console.log(result.user);
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
+      };
     return (
         <main>
       <Helmet>
@@ -20,7 +39,7 @@ const Login = () => {
             <div className="divider w-3/4 mx-auto"></div>
             <form
               className="card-body  w-[320px] md:w-[440px] lg:w-[540px]"
-            //   onSubmit={handleSubmit(onSubmit)}
+              onSubmit={handleSubmit(onSubmit)}
             >
               <div className="form-control ">
                 <label className="label">
@@ -31,13 +50,13 @@ const Login = () => {
                   name="email"
                   placeholder="email"
                   className="input input-bordered "
-                //   {...register("email", { required: true })}
+                  {...register("email", { required: true })}
                 />
-                {/* {errors.email && (
+                {errors.email && (
                   <span className="text-rose-500 font-bold">
                     This field is required
                   </span>
-                )} */}
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -48,13 +67,13 @@ const Login = () => {
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
-                //   {...register("password", { required: true })}
+                  {...register("password", { required: true })}
                 />
-                {/* {errors.password && (
+                {errors.password && (
                   <span className="text-rose-500 font-bold">
                     This field is required
                   </span>
-                )} */}
+                )}
               </div>
               <div className="form-control mt-6">
                 <button className="btn bg-[#403F3F] text-white">Login</button>
