@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../components/SocialLogin";
 import useAuth from "../hooks/useAuth";
@@ -8,6 +8,9 @@ import useAuth from "../hooks/useAuth";
 
 const Login = () => {
     const {loginUser} = useAuth()
+    const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state || "/";
     const {
         register,
         handleSubmit,
@@ -16,12 +19,12 @@ const Login = () => {
       const onSubmit = (data) => {
         const { email, password } = data;
         loginUser(email, password)
-          .then((result) => {
-            console.log(result.user);
-          })
-          .catch((error) => {
-            console.log(error.message);
+        .then((result) => {
+            if (result.user) {
+              navigate(from);
+            }
           });
+          
       };
     return (
         <main>

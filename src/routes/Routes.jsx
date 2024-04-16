@@ -6,38 +6,41 @@ import Details from "../pages/Details";
 import Category from "../pages/Category";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-
+import ProtectedRoutes from "./ProtectedRoutes";
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root/>,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-            index: true,
-            element: <Home/>,
-            loader: ()=> fetch('estate.json'),
-        },
-        {
-          path:'/category',
-          element: <Category/>,
-          loader: ()=> fetch ('category.json'),
-        },
-        {
-          path: '/estate/:id',
-          element: <Details/>,
-          loader: ()=> fetch('estate.json'),
-        },
-        {
-          path:'/login',
-          element: <Login/>
-        },
-        {
-          path: '/register',
-          element: <Register/>
-        }
-       
-      ]
-    },
-  ]);
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+        loader: () => fetch("estate.json"),
+      },
+      {
+        path: "/category",
+        element: <Category />,
+        loader: () => fetch("category.json"),
+      },
+      {
+        path: "/estate/:id",
+        element: (
+          <ProtectedRoutes>
+            <Details />
+          </ProtectedRoutes>
+        ),
+        loader: () => fetch("estate.json"),
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+    ],
+  },
+]);

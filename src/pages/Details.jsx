@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Details = () => {
   const estate = useLoaderData();
@@ -18,7 +19,8 @@ const Details = () => {
     facilities,
   } = realEstate;
   return (
-    <main className="mt-10 mb-4 container mx-auto">
+    <main className="mt-10">
+      <div className="container mx-auto mb-10">
       <div className="flex gap-12 flex-col lg:flex-row w-11/12 mx-auto lg:w-full">
         <div className="basis-1/2 bg-[#F3F3F3] flex items-center justify-center rounded-xl">
           <img className="w-full opacity-90 rounded-lg" src={image} alt="" />
@@ -72,8 +74,11 @@ const Details = () => {
           </div>
         </div>
       </div>
+      </div>
+      <Footer/>
       {/* <ToastContainer /> */}
     </main>
+    
   );
 };
 

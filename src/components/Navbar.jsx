@@ -88,12 +88,38 @@ const Navbar = () => {
             className="btn btn-ghost btn-circle avatar"
           ></div>
           {user ? (
-            <button onClick={logOut} className="btn glass bg-[#d90249] text-white">
-              Sign Out
-            </button>
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    src={
+                      user?.photoURL ||
+                      "https://i.ibb.co/8jzLLB4/438036378-984851046398483-5226497363877099275-n.jpg"
+                    }
+                  />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <button className="btn btn-sm  btn-ghost">
+                    {user?.displayName || "user name not found"}
+                  </button>
+                </li>
+                <li>
+                  <button onClick={logOut} className="btn btn-sm  btn-ghost">
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
           ) : (
             <Link to="/login">
-              <button className="btn glass bg-[#d90249] text-white">Login</button>
+              <button className="btn glass bg-[#d90249] text-white">
+                Login
+              </button>
             </Link>
           )}
         </div>
