@@ -2,9 +2,8 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/FirebaseProvider";
 
-
 const Navbar = () => {
-    const {user,} = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext);
 
   const links = (
     <>
@@ -89,16 +88,14 @@ const Navbar = () => {
             className="btn btn-ghost btn-circle avatar"
           ></div>
           {user ? (
-                <button  className="btn">
-                  Sign Out
-                </button>
-              ) : (
-                <Link to="/login">
-                  <button className="btn">Login</button>
-                </Link>
-              )}
-
-          
+            <button onClick={logOut} className="btn glass bg-[#d90249] text-white">
+              Sign Out
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="btn glass bg-[#d90249] text-white">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </main>

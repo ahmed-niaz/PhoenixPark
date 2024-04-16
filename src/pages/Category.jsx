@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet";
 
 const Category = () => {
   const category = useLoaderData();
-  console.log(category);
   return (
     <main>
       <Helmet>
