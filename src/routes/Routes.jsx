@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import ErrorPage from "../pages/ErrorPage";
 import Details from "../pages/Details";
 import Category from "../pages/Category";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 
 export const router = createBrowserRouter([
@@ -26,6 +28,14 @@ export const router = createBrowserRouter([
           path: '/estate/:id',
           element: <Details/>,
           loader: ()=> fetch('estate.json'),
+        },
+        {
+          path:'/login',
+          element: <Login/>
+        },
+        {
+          path: '/register',
+          element: <Register/>
         }
        
       ]

@@ -30,6 +30,19 @@ const Navbar = () => {
           Category
         </NavLink>
       </li>
+
+      <li>
+        <NavLink
+          to="/register"
+          className={({ isActive }) =>
+            isActive
+              ? "border-2 rounded-xl border-[#d90429] bg-none text-sm font-bold text-[#d90429]"
+              : "text-sm font-bold hover:"
+          }
+        >
+          Register
+        </NavLink>
+      </li>
     </>
   );
   return (
@@ -55,7 +68,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 z"
             >
               {links}
             </ul>
@@ -65,9 +78,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {links}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
           <div
@@ -84,6 +95,10 @@ const Navbar = () => {
                   <button className="btn">Login</button>
                 </Link>
               )} */}
+
+          <Link to="/login">
+            <button className="btn glass bg-[#d90429]">Login</button>
+          </Link>
         </div>
       </div>
     </main>
