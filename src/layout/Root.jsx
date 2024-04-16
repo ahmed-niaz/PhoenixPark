@@ -5,6 +5,7 @@ const Root = () => {
     <main className="font-noto">
       <Navbar />
       <Outlet />
+     
     </main>
   );
 };

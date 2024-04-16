@@ -1,0 +1,25 @@
+[
+  {
+    "image": "https://i.ibb.co/4SVj5x9/For-Auction.jpg",
+    "title": "Auction Properties",
+    "id": 1,
+
+
+    "description": "View Available properties,save searches,access new listing and contact brokers directly."
+  },
+  {
+    "image": "https://i.ibb.co/Z6MV4jb/forSale.jpg",
+    "title": "Sale Properties",
+    "id": 2,
+
+
+    "description": "Explore nationwide properties in upcoming auctions. Quickly access due diligence documents, register to bid and more."
+  },
+  {
+    "image": "https://i.ibb.co/Z1VxdvY/ForLease.jpg",
+    "title": "Lease Properties",
+    "id": 3,
+
+    "description": "Search for available spaces, access floor plans, review pricing and contact brokers directly for the properties."
+  }
+]
