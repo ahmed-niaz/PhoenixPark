@@ -5,8 +5,7 @@ const Details = () => {
   const { id } = useParams();
   const idInt = parseInt(id);
   const realEstate = estate.find((e) => e.id === idInt);
-  // console.log(estate);
-  // console.log(realEstate);
+
   const {
     image,
     estate_title,

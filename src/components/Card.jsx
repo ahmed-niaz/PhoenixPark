@@ -19,7 +19,7 @@ const Card = ({ estate }) => {
           <p>{description}</p>
           <div className="card-actions justify-center">
            
-            <Link to={`/estate/${id}`} className="btn  w-10/12 mx-auto border-[#d90429] border-2 font-bold text-xl text-[#d90429]">View Property</Link>
+            <Link to={`/estate/${id}`} className="btn glass  w-10/12 mx-auto bg-[#d90429] border-2 font-bold text-xl text-white">View Property</Link>
             
           </div>
         </div>

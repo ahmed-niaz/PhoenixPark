@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { AuthContext } from "../providers/FirebaseProvider";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import useAuth from "../hooks/useAuth";
 
 const Register = () => {
-  const { registerUser } = useContext(AuthContext);
+  const { registerUser } = useAuth();
   const {
     register,
     handleSubmit,
@@ -104,7 +103,7 @@ const Register = () => {
                 </small>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-[#403F3F] text-white">
+                <button className="btn glass bg-[#d90429] text-white font-bold">
                   Register
                 </button>
               </div>

@@ -14,7 +14,7 @@ const CategoryList = ({ cat }) => {
           <div className="card-actions justify-center">
             <Link
               to="/"
-              className="btn  w-10/12 mx-auto border-[#d90429] border-2 font-bold text-xl text-[#d90429]"
+              className="btn glass  w-10/12 mx-auto bg-[#d90429] border-2 font-bold text-xl text-white"
             >
               View Property List
             </Link>

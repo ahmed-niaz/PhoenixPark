@@ -1,13 +1,13 @@
-import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../providers/FirebaseProvider";
 import { useForm } from "react-hook-form";
+import SocialLogin from "../components/SocialLogin";
+import useAuth from "../hooks/useAuth";
 
 
 
 const Login = () => {
-    const {loginUser} = useContext(AuthContext)
+    const {loginUser} = useAuth()
     const {
         register,
         handleSubmit,
@@ -76,7 +76,7 @@ const Login = () => {
                 )}
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-[#403F3F] text-white">Login</button>
+                <button className="btn glass bg-[#d90429] text-white font-bold">Login</button>
               </div>
               <small className="text-center font-bold">
                 Dont’t Have An Account ?{" "}
@@ -85,7 +85,7 @@ const Login = () => {
                 </Link>
               </small>
             </form>
-            {/* <SocialLogin /> */}
+            <SocialLogin />
           </div>
         </div>
       </div>
