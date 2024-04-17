@@ -1,10 +1,18 @@
 import { Helmet } from "react-helmet";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { IoEyeOffOutline } from "react-icons/io5";
+import { BsEyeFill } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const Register = () => {
   const { registerUser } = useAuth();
+  const [open, setOpen] = useState(false);
+  const toggle = () => {
+    setOpen(!open);
+  };
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state || "/";
@@ -12,15 +20,18 @@ const Register = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({ mode: "onChange" });
   const onSubmit = (data) => {
     const { email, password } = data;
     registerUser(email, password).then((result) => {
-        if (result.user) {
-          navigate(from);
-        }
-      });
+      if (result.user) {
+        notify()
+        navigate(from);
+      }
+    });
   };
+
+  const notify = () => toast.success("Registration Complete");
   return (
     <main>
       <Helmet>
@@ -89,15 +100,34 @@ const Register = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type={open === false ? "password" : "text"}
                   name="password"
                   placeholder="password"
-                  className="input input-bordered"
-                  {...register("password", { required: true })}
+                  className="input input-bordered relative "
+                  {...register("password", {
+                    required: "Password is Required",
+                    minLength: {
+                      value: 6,
+                      message: `Minimum required length is 6`,
+                    },
+                    pattern: {
+                      value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+                      message:
+                        "Password must contain at least one uppercase and one lowercase letter",
+                    },
+                  })}
                 />
+                <div className="absolute right-16 mt-[52px]">
+                  {open === false ? (
+                    <BsEyeFill onClick={toggle} />
+                  ) : (
+                    <IoEyeOffOutline onClick={toggle} />
+                  )}
+                </div>
+
                 {errors.password && (
                   <span className="text-[#d90429] font-bold">
-                    This field is required
+                    {errors.password.message}
                   </span>
                 )}
               </div>
@@ -108,7 +138,7 @@ const Register = () => {
                 </small>
               </div>
               <div className="form-control mt-6">
-                <button className="btn glass bg-[#d90429] text-white font-bold">
+                <button onClick={notify} className="btn glass bg-[#d90429] text-white font-bold">
                   Register
                 </button>
               </div>
@@ -123,6 +153,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </main>
   );
 };

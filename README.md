@@ -11,3 +11,4 @@
 * [AnimateCSS](https://animate.style/)
 * [TailwindCSS_AnimateCSS](https://www.npmjs.com/package/tailwindcss-animatecss)
 * [React-hook-form](https://react-hook-form.com/get-started)
+* [React-toastify](https://www.npmjs.com/package/react-toastify)
