@@ -44,6 +44,18 @@ const Navbar = () => {
           Register
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive
+              ? "border-2 rounded-xl border-[#d90429] bg-none text-sm font-bold text-[#d90429]"
+              : "text-sm font-bold hover:"
+          }
+        >
+          About
+        </NavLink>
+      </li>
     </>
   );
   return (

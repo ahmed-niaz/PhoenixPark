@@ -28,7 +28,7 @@ const Details = () => {
       </Helmet>
       <div className="container mx-auto mb-10">
       <div className="flex gap-12 flex-col lg:flex-row w-11/12 mx-auto lg:w-full">
-        <div className="basis-1/2 bg-[#F3F3F3] flex items-center justify-center rounded-xl">
+        <div className="basis-1/2 flex items-center justify-center rounded-xl">
           <img className="w-full opacity-90 rounded-lg" src={image} alt="" />
         </div>
         <div>
@@ -37,10 +37,10 @@ const Details = () => {
           </h2>
           <h2 className="font-bold my-2 lg:my-8 text-center lg:text-start">
             {" "}
-            Segment:{segment_name}
+            Segment: <span className="text-[#d90429]">{segment_name}</span>
           </h2>
 
-          <p>
+          <p className="my-4 md:my-0">
             {" "}
             Available for{" "}
             <div className="badge border-rose-800 hover:cursor-pointer font-bold text-[#d90429]">
@@ -52,7 +52,7 @@ const Details = () => {
             Overview of the project:{" "}
             <span className="font-normal">{description}</span>
           </p>
-          <div className="flex gap-2 ">
+          <div className="hidden lg:flex  gap-2">
             <p className="flex items-center font-bold"> Facility</p>
             {facilities.map((facility, idx) => (
               <button
@@ -66,15 +66,15 @@ const Details = () => {
           <div className="divider"></div>
           <div className="my-4">
             <div className="grid grid-cols-2">
-              <p>{status} price: </p>
+              <p className="font-bold">{status} price: </p>
               <p className="font-bold">${price}</p>
             </div>
             <div className="grid grid-cols-2">
-              <p>Area</p>
+              <p className="font-bold">Area</p>
               <p className="font-bold">{area}</p>
             </div>
             <div className="grid grid-cols-2">
-              <p>Location</p>
+              <p className="font-bold">Location</p>
               <p className="font-bold">{location}</p>
             </div>
           </div>

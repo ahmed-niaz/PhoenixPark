@@ -7,6 +7,7 @@ import Category from "../pages/Category";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ProtectedRoutes from "./ProtectedRoutes";
+import About from "../pages/About";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      {
+        path: '/about',
+        element: <About/>
+      }
     ],
   },
 ]);
