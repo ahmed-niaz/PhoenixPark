@@ -18,6 +18,7 @@ const googleProvider = new GoogleAuthProvider();
 const gitHubProvider = new GithubAuthProvider();
 const FirebaseProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading,setLoading] = useState(true);
   const registerUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };

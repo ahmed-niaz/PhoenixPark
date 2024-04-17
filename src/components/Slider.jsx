@@ -19,11 +19,11 @@ const Slider = () => {
       >
         <SwiperSlide>
           <img
-            className="w-full  h-[600px] bg-cover relative rounded-xl"
+            className="w-full z-0 h-[600px] bg-cover relative rounded-xl"
             src={slider4}
             alt=""
           />
-          <div className="absolute z-10 top-2/4 right-[240px]">
+          <div className="absolute  top-2/4 right-[240px]">
             <p className="font-extrabold text-8xl text-[#d90429] font-jersey animate__animated animate__backInDown">
               Your Next Deal Starts Here.
             </p>

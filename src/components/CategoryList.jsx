@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
-const CategoryList = ({ cat }) => {
-  const { title, image, description } = cat;
+import PropTypes from "prop-types";
+const CategoryList = ({ category }) => {
+  const { title, image, description } = category;
   return (
     <main>
       <div className="card w-full bg-base-100 shadow-xl">
@@ -26,6 +26,6 @@ const CategoryList = ({ cat }) => {
 };
 
 CategoryList.propTypes = {
-    cat: PropTypes.object,
-  }
+  category: PropTypes.object,
+};
 export default CategoryList;

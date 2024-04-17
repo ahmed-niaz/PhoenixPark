@@ -20,11 +20,6 @@ export const router = createBrowserRouter([
         loader: () => fetch("estate.json"),
       },
       {
-        path: "/category",
-        element: <Category />,
-        loader: () => fetch("category.json"),
-      },
-      {
         path: "/estate/:id",
         element: (
           <ProtectedRoutes>
@@ -32,6 +27,10 @@ export const router = createBrowserRouter([
           </ProtectedRoutes>
         ),
         loader: () => fetch("estate.json"),
+      },
+      {
+        path: "/category",
+        element: <Category />,
       },
       {
         path: "/login",

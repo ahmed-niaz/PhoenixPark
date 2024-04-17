@@ -3,7 +3,7 @@ import Slider from "./Slider";
 
 const Banner = () => {
     return (
-        <main className="container mx-auto">
+        <main className="container mx-auto mt-4">
             <Slider/>
         </main>
     );
