@@ -1,16 +1,25 @@
 import Footer from "../components/Footer";
-import about from '../assets/images/about.jpg'
+import about from "../assets/images/about.jpg";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
-    <main >
+    <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>PhoenixPark | About</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 container mx-auto my-10 ">
         <div>
-            <img className="rounded-lg w-full" src={about} alt="" />
+          <img className="rounded-lg lg:w-full w-11/12 mx-auto" src={about} alt="" />
         </div>
-        <div>
-          <h2 className="font-bold text-2xl">
-            This is <span className="font-extrabold text-4xl text-[#d90429] font-jersey ">PhoenixPark</span>
+        <div className="p-4 md:p-0 text-center lg:text-start">
+          <h2 className="font-bold text-2xl ">
+            This is{" "}
+            <span className="font-extrabold text-4xl text-[#d90429] font-jersey ">
+              PhoenixPark
+            </span>
           </h2>
           <p className="mt-4 font-semibold">
             Welcome to PhoenixPark Industrial Real Estate, your premier
@@ -32,7 +41,7 @@ const About = () => {
         </div>
       </div>
       <div className="bg-black p-10">
-      <Footer />
+        <Footer />
       </div>
     </main>
   );
