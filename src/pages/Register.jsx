@@ -1,37 +1,34 @@
 import { Helmet } from "react-helmet";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { BsEyeFill } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
 
 const Register = () => {
-  const { registerUser } = useAuth();
+  const { registerUser, updateUserProfile } = useAuth();
   const [open, setOpen] = useState(false);
   const toggle = () => {
     setOpen(!open);
   };
   const navigate = useNavigate();
-  const location = useLocation();
-  const from = location?.state || "/";
+
+  const from = "/";
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ mode: "onChange" });
   const onSubmit = (data) => {
-    const { email, password } = data;
-    registerUser(email, password).then((result) => {
-      if (result.user) {
-        notify()
+    const { email, password, fullName, image } = data;
+    registerUser(email, password).then(() => {
+      updateUserProfile(fullName, image).then(() => {
         navigate(from);
-      }
+      });
     });
   };
 
-  const notify = () => toast.success("Registration Complete");
   return (
     <main>
       <Helmet>
@@ -138,7 +135,7 @@ const Register = () => {
                 </small>
               </div>
               <div className="form-control mt-6">
-                <button onClick={notify} className="btn glass bg-[#d90429] text-white font-bold">
+                <button className="btn glass bg-[#d90429] text-white font-bold">
                   Register
                 </button>
               </div>
@@ -153,7 +150,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
     </main>
   );
 };

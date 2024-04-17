@@ -32,7 +32,7 @@ const Slider = () => {
         <SwiperSlide>
           {" "}
           <img
-            className="w-full h-[600px]  bg-cover relative"
+            className="w-full h-[600px]  bg-cover relative rounded-xl"
             src={slider2}
             alt=""
           />
@@ -56,7 +56,7 @@ const Slider = () => {
         <SwiperSlide>
           {" "}
           <img
-            className="w-full h-[600px]  bg-cover relative"
+            className="w-full h-[600px]  bg-cover relative rounded-xl"
             src={slider1}
             alt=""
           />

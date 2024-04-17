@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 const Details = () => {
   const estate = useLoaderData();
@@ -20,6 +21,11 @@ const Details = () => {
   } = realEstate;
   return (
     <main className="mt-10">
+        <Helmet>
+        <meta charSet="utf-8" />
+        <title>PhoenixPark | Estate Details</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="container mx-auto mb-10">
       <div className="flex gap-12 flex-col lg:flex-row w-11/12 mx-auto lg:w-full">
         <div className="basis-1/2 bg-[#F3F3F3] flex items-center justify-center rounded-xl">

@@ -4,6 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 const ProtectedRoutes = ({children}) => {
     const {user} = useAuth();
     const location = useLocation()
+  
     if(!user){
         return <Navigate to='/login' state={location?.pathname || 
         '/'}/>
